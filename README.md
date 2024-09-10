@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @wolfieman
 - 👀 I’m interested in learning
-- 🌱 I’m currently learning how to build my website
-- 💞️ I’m looking to collaborate on python programming
+- 🌱 I’m currently learning sas analytical cloud viya
+- 💞️ I’m looking to collaborate on sas visualization & programming
 - 📫 How to reach me here: [sanyer.org](https://www.sanyer.org/ "Wolfgang Sanyer's Resume").
 
 <!---
