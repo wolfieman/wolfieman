@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @wolfieman
 - 👀 I’m interested in learning
-- 🌱 I’m currently learning sas analytical cloud viya
+- 🌱 I’m currently learning sas analytical cloud & viya
 - 💞️ I’m looking to collaborate on sas visualization & programming
 - 📫 How to reach me here: [sanyer.org](https://www.sanyer.org/ "Wolfgang Sanyer's Resume").
 
