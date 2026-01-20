@@ -1,8 +1,21 @@
-- 👋 Hi, I’m @wolfieman
-- 👀 I’m interested in learning
-- 🌱 I’m currently learning sas analytical cloud & viya
-- 💞️ I’m looking to collaborate on sas visualization & programming
-- 📫 How to reach me here: [sanyer.org](https://www.sanyer.org/ "Wolfgang Sanyer's Resume").
+# Wolfgang Sanyer, Sr.
+
+**Certified IT Professional** specializing in Business Process Integration with SAP S/4HANA
+
+## Current Focus
+- MBA Student focusing on Advanced Analytics and Business Intelligence
+- SAS Viya & Analytical Cloud Platform Development
+- EV Infrastructure Analysis & Data Visualization
+- Managerial Accounting & Quantitative Decision-Making
+
+## Interests
+- Business Analytics & Data Science
+- SAS Programming & Visualization
+- Electric Vehicle Infrastructure & Policy Analysis
+- Cloud-Based Analytics Platforms
+
+## Connect
+📫 [sanyer.org](https://www.sanyer.org/ "Wolfgang Sanyer's Resume")
 
 <!---
 wolfieman/wolfieman is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
