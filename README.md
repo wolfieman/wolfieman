@@ -15,7 +15,7 @@
 - Cloud-Based Analytics Platforms
 
 ## Connect
-📫 [sanyer.org](https://www.sanyer.org/ "Wolfgang Sanyer's Resume")
+📫 [LinkedIn: Wolfgang Sanyer](https://www.linkedin.com/in/wolfgangsanyer/)
 
 <!---
 wolfieman/wolfieman is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
