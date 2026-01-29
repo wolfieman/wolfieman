@@ -1,4 +1,4 @@
-# Wolfgang Sanyer, Sr.
+# Wolfgang Sanyer
 
 **Certified IT Professional** specializing in Business Process Integration with SAP S/4HANA
 
