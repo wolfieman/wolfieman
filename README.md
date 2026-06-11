@@ -60,7 +60,7 @@ Right now I am completing an MBA in Business Analytics at Fayetteville State Uni
 ### GitHub
 
 <div align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=wolfieman&show_icons=true&hide_border=true&title_color=1E3A5F&icon_color=84B6DA&text_color=51627a&bg_color=EAF2F9" alt="GitHub stats">
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=wolfieman&show_icons=true&hide_rank=true&hide_border=true&title_color=1E3A5F&icon_color=84B6DA&text_color=51627a&bg_color=EAF2F9" alt="GitHub stats">
 </div>
 
 ### Connect
