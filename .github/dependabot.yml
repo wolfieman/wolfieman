@@ -1,0 +1,19 @@
+# Master template. Copied to each repo's .github/dependabot.yml with
+# PROFILE replaced by the repo's commit tag.
+#
+# Keeps SHA-pinned GitHub Actions current: floating tags were replaced with
+# commit SHAs (supply-chain hardening), which never auto-update, so Dependabot
+# proposes bumps, grouped into ONE monthly PR per repo (not one per action) to
+# keep branch/PR noise down. Major bumps are surfaced, not ignored.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+    commit-message:
+      prefix: "[PROFILE][CHORE]"

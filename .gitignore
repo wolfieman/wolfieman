@@ -1,0 +1,23 @@
+# Secrets / env
+.env
+.env.*
+*.key
+*.pem
+secrets.*
+
+# Office source binaries (PDF export is the canonical tracked artifact)
+*.xlsx
+*.docx
+*.pptx
+
+# Python / Node build + env
+__pycache__/
+*.py[cod]
+.venv/
+node_modules/
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db

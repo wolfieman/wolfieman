@@ -1,0 +1,68 @@
+name: content-guards
+
+# Server-side content safety nets that complement the local pre-commit hooks
+# (which only run in clones where `pre-commit install` / the git hook was set up).
+#
+#   1. gitleaks       — secret scanning. BLOCKING: a leaked secret fails CI.
+#   2. ai-signatures  — embedded AI-authorship signatures. BLOCKING: a hit fails CI.
+#
+# This file is managed centrally and copied verbatim into each repo's
+# .github/workflows/. Edit the central master, then re-roll; do not
+# hand-edit per-repo copies.
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  gitleaks:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write # gitleaks-action lists PR commits (and comments on leaks)
+    steps:
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+        with:
+          fetch-depth: 0
+      - uses: gitleaks/gitleaks-action@e0c47f4f8be36e29cdc102c57e68cb5cbf0e8d1e # v3.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  ai-signatures:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+      - name: Scan content for AI-authorship signatures (BLOCKING)
+        shell: bash
+        run: |
+          # Hard-ban signatures only (no fuzzy prose tells, which false-positive
+          # on legitimate writing about AI). The standards / notes / .claude /
+          # .github corpus is allowlisted because it quotes these very strings as
+          # examples of what to ban.
+          #
+          # Promoted to a blocking gate 2026-06-09 after a clean corpus period.
+          patterns='(co-authored-by|generated (with|by)|(authored|written|verified|reviewed) by).*(claude|anthropic|copilot|chatgpt|openai|gemini|gpt-)'
+          hits=$(git ls-files -z \
+            | grep -zvE '^(standards|notes)/|(^|/)\.(claude|github|githooks)/|(^|/)(CLAUDE|MEMORY)\.md$' \
+            | xargs -0 -r grep -IinE "$patterns" 2>/dev/null || true)
+          if [ -n "$hits" ]; then
+            {
+              echo "## AI-authorship signature scan — FAIL (blocking)"
+              echo
+              echo "Embedded AI-authorship signatures were found. Remove them per the"
+              echo "no-AI-attribution rule. This check is blocking: CI fails until the"
+              echo "signatures are removed."
+              echo
+              echo '```'
+              echo "$hits"
+              echo '```'
+            } >> "$GITHUB_STEP_SUMMARY"
+            echo "::error::AI-authorship signatures found (see job summary); this check is blocking."
+            exit 1
+          else
+            echo "No AI-authorship signatures found." >> "$GITHUB_STEP_SUMMARY"
+          fi
+          exit 0
