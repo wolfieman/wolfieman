@@ -57,12 +57,6 @@ Right now I am completing an MBA in Business Analytics at Fayetteville State Uni
 | [**ev-pulse-nc**](https://github.com/wolfieman/ev-pulse-nc) | North Carolina EV infrastructure gap analysis: data pipelines, forecasting, and policy-ready insight. |
 | [**vendor-scope**](https://github.com/wolfieman/vendor-scope) | Vendor readiness and availability analytics. Public procurement data turned into an audited, decision-ready view. |
 
-### GitHub
-
-<div align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=wolfieman&show_icons=true&hide_rank=true&hide_border=true&title_color=1E3A5F&icon_color=84B6DA&text_color=51627a&bg_color=EAF2F9" alt="GitHub stats">
-</div>
-
 ### Connect
 
 [Website](https://www.sanyer.org) &nbsp;&middot;&nbsp; [LinkedIn](https://www.linkedin.com/in/wolfgangsanyer)
